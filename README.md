@@ -28,6 +28,7 @@ Split_and_Merge/
 ├── docker-compose.yml       # Configuración de Docker Compose
 ├── dockerfile               # Definición del contenedor Docker
 ├── pyproject.toml          # Dependencias y configuración del proyecto
+├── .env.example            # Ejemplo de variables de entorno
 └── README.md               # Documentación
 ```
 
@@ -47,13 +48,24 @@ Split_and_Merge/
 
 1. **Clonar el repositorio**
    ```bash
+   git clone https://github.com/Estebarra/Split_and_Merge.git
    cd Split_and_Merge
    ```
 
-2. **Crear archivo .env** (opcional)
-   ```bash
-   touch .env
+2. **Configurar variables de entorno** (opcional)
+
+   El proyecto incluye un archivo `.env.example` con la configuración por defecto:
+   ```env
+   STREAMLIT_SERVER_PORT=8501
+   STREAMLIT_SERVER_ADDRESS=0.0.0.0
    ```
+
+   Para usar una configuración personalizada, copia el archivo de ejemplo:
+   ```bash
+   cp .env.example .env
+   ```
+
+   Y modifica los valores según tus necesidades.
 
 3. **Iniciar la aplicación con Docker Compose**
    ```bash
