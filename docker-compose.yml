@@ -1,0 +1,8 @@
+services:
+  demo-app:
+    build: .
+    container_name: demo
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
